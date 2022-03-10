@@ -10,7 +10,6 @@ hashedParameter = 0
 orderValue = 0
 hashedResult = []
 newHashOrder = []
-hashTxt =[]
 finalHash = ''
 
 # Generate and add salt
