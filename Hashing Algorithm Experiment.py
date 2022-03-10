@@ -75,7 +75,6 @@ def alterHash():
     hashedResult[5::15] = ['{0}1{2}{3}{4}{5}{6}{7}'.format(*binaryUnit) for binaryUnit in hashedResult[5::15]]
     hashedResult[6::6] = ['{0}{1}{2}1{4}{5}{6}{7}'.format(*binaryUnit) for binaryUnit in hashedResult[6::6]]
     hashedResult[7::7] = ['{0}{1}{2}{3}0{5}{6}{7}'.format(*binaryUnit) for binaryUnit in hashedResult[7::7]]
-    #hashedResult[0::1] = ['0b{0}{1}{2}{3}{4}{5}{6}{7}'.format(*binaryUnit) for binaryUnit in hashedResult[0::1]]
 
 # Reorder hashedResult
 def newOrder():
