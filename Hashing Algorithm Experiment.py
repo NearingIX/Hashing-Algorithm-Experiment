@@ -91,7 +91,7 @@ def newOrder():
 
 def alterHashTwo():
     global hashedResult
-    hashedResult[0::3] = ['{0}{1}{2}1{4}{5}{6}{7}'.format(*binaryUnit) for binaryUnit in hashedResult[0::3]]
+    hashedResult[0::8] = ['{0}{1}{2}1{4}{5}{6}{7}'.format(*binaryUnit) for binaryUnit in hashedResult[0::8]]
     hashedResult[0::13] = ['{0}1{2}{3}{4}{5}{6}{7}'.format(*binaryUnit) for binaryUnit in hashedResult[0::13]]
     hashedResult[1::8] = ['{0}{1}{2}{3}0{5}{6}{7}'.format(*binaryUnit) for binaryUnit in hashedResult[1::8]]
     hashedResult[2::5] = ['{0}{1}{2}{3}{4}{5}{6}0'.format(*binaryUnit) for binaryUnit in hashedResult[2::5]]
