@@ -15,6 +15,14 @@ newHashOrder = []
 newHashOrderTwo = []
 finalHash = ''
 
+def validInput():
+    global plainTxt
+    while len(str(plainTxt)) < 6:
+        try:
+            plainTxt = input("Please enter a password that is longer than six characters: ")
+        except ValueError:
+            plainTxt = ''
+
 # Generate and add salt
 def generateSalt():
     global saltedPlainTxt, plainTxt, salt
@@ -121,6 +129,7 @@ def recordHash():
     savedHash.write(str("\n" + "\n" + "Hashed Password: " + finalHash + "\n"))
     savedHash.write(str("DateTime Stamp: " + dateTimeStampValue))
 
+validInput()
 generateSalt()
 binaryConverter()
 hashPadValue()
