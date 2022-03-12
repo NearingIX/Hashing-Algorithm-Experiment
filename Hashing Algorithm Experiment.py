@@ -15,6 +15,7 @@ newHashOrder = []
 newHashOrderTwo = []
 finalHash = ''
 
+# Validate input length
 def validInput():
     global plainTxt
     while len(str(plainTxt)) < 6:
