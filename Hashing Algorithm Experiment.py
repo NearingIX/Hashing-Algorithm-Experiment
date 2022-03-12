@@ -73,6 +73,7 @@ def alterHash():
     hashedResult[0::2] = ['{0}{1}{2}{3}1{5}{6}{7}'.format(*binaryUnit) for binaryUnit in hashedResult[0::2]]
     hashedResult[0::9] = ['{0}{1}1{3}{4}{5}{6}{7}'.format(*binaryUnit) for binaryUnit in hashedResult[0::9]]
     hashedResult[1::4] = ['{0}{1}{2}{3}{4}{5}0{7}'.format(*binaryUnit) for binaryUnit in hashedResult[1::4]]
+    hashedResult[2::2] = ['{0}{1}{2}{3}0{5}{6}{7}'.format(*binaryUnit) for binaryUnit in hashedResult[2::2]]
     hashedResult[2::11] = ['{0}{1}{2}{3}{4}{5}{6}1'.format(*binaryUnit) for binaryUnit in hashedResult[2::11]]
     hashedResult[4::8] = ['{0}{1}{2}{3}{4}0{6}{7}'.format(*binaryUnit) for binaryUnit in hashedResult[4::8]]
     hashedResult[5::15] = ['{0}1{2}{3}{4}{5}{6}{7}'.format(*binaryUnit) for binaryUnit in hashedResult[5::15]]
@@ -117,7 +118,7 @@ def convertToUnicode():
 def recordHash():
     global savedHash, finalHash
     dateTimeStampValue = str(datetime.datetime.now())
-    savedHash.write(str("\n" + "Hashed Password: " + finalHash))
+    savedHash.write(str("Hashed Password: " + finalHash + "\n"))
     savedHash.write(str("\n" + "DateTime Stamp: " + dateTimeStampValue))
 
 generateSalt()
