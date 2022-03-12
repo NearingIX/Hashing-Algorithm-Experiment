@@ -18,9 +18,9 @@ finalHash = ''
 # Validate input length
 def validInput():
     global plainTxt
-    while len(str(plainTxt)) < 6:
+    while len(str(plainTxt)) < 8:
         try:
-            plainTxt = input("Please enter a password that is longer than six characters: ")
+            plainTxt = input("Please enter a password that is at least eight characters long: ")
         except ValueError:
             plainTxt = ''
 
@@ -94,7 +94,7 @@ def newOrder():
     global newHashOrder, hashedResult
     newHashOrder = [13, 46, 30, 27, 21, 55, 34, 33, 62, 28, 61, 59, 60, 
     14, 2, 57, 37, 4, 38, 18, 10, 64, 20, 1, 41, 17, 23, 6, 51, 3, 16, 
-    24, 43, 11, 53, 52, 48, 49, 0, 5, 42, 12, 50, 36, 44, 63, 58, 47, 35,
+    24, 43, 11, 53, 52, 48, 49, 5, 42, 12, 50, 36, 0, 44, 63, 58, 47, 35,
     9, 25, 32, 26, 56, 54, 31, 15, 29, 19, 39, 7, 8, 22, 45, 40]
     # Index hashedResult with newOrder list
     hashedResult = [hashedResult[i] for i in newHashOrder]
