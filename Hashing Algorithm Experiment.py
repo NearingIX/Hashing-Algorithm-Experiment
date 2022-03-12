@@ -118,8 +118,8 @@ def convertToUnicode():
 def recordHash():
     global savedHash, finalHash
     dateTimeStampValue = str(datetime.datetime.now())
-    savedHash.write(str("Hashed Password: " + finalHash + "\n"))
-    savedHash.write(str("\n" + "DateTime Stamp: " + dateTimeStampValue))
+    savedHash.write(str("\n" + "\n" + "Hashed Password: " + finalHash + "\n"))
+    savedHash.write(str("DateTime Stamp: " + dateTimeStampValue))
 
 generateSalt()
 binaryConverter()
